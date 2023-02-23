@@ -1,5 +1,24 @@
 // invoke the function and log the results
+console.log(isPalindrome("eevee"))
 
+function isPalindrome(word) {
+    word = word.split("")
+    forward = []
+    backward = []
+    for(i=0; i < word.length; i++) {
+        backward.push(word[i])
+        forward.unshift(word[i])
+    }
+        forward = forward.join()
+        backward = backward.join()
+    if (forward === backward) {
+        return true
+    } else
+    {
+        return false
+    }
+
+}
 //write the function
 //turn the word into an array of characters
 //create an empty forward array
